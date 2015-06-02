@@ -14,6 +14,7 @@
 		C4B2677B1B1C969D000B048A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B2677A1B1C969D000B048A /* Images.xcassets */; };
 		C4B2677E1B1C969D000B048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B2677C1B1C969D000B048A /* Main.storyboard */; };
 		C4B2678A1B1C969D000B048A /* retainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267891B1C969D000B048A /* retainTests.m */; };
+		C4B267951B1DFFC3000B048A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267941B1DFFC3000B048A /* Book.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		C4B267831B1C969D000B048A /* retainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = retainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B267881B1C969D000B048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B267891B1C969D000B048A /* retainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = retainTests.m; sourceTree = "<group>"; };
+		C4B267931B1DFFC3000B048A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = ../Book.h; sourceTree = "<group>"; };
+		C4B267941B1DFFC3000B048A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = ../Book.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		C4B2676C1B1C969D000B048A /* retain */ = {
 			isa = PBXGroup;
 			children = (
+				C4B267931B1DFFC3000B048A /* Book.h */,
+				C4B267941B1DFFC3000B048A /* Book.m */,
 				C4B2676F1B1C969D000B048A /* AppDelegate.h */,
 				C4B267701B1C969D000B048A /* AppDelegate.m */,
 				C4B267741B1C969D000B048A /* ViewController.h */,
@@ -218,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B267951B1DFFC3000B048A /* Book.m in Sources */,
 				C4B267761B1C969D000B048A /* ViewController.m in Sources */,
 				C4B267731B1C969D000B048A /* main.m in Sources */,
 				C4B267791B1C969D000B048A /* retain.xcdatamodeld in Sources */,

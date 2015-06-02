@@ -10,6 +10,7 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSButton *readButton;
 
 @end
 
