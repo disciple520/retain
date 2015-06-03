@@ -7,12 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "Book.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.currentBooks = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -22,4 +24,7 @@
     // Update the view, if already loaded.
 }
 
+- (IBAction)addBook:(id)sender {
+    [self.currentBooks addObject:[[Book alloc] init]];
+}
 @end

@@ -13,7 +13,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.bookTitle = @"What's Best Next";
+        self.title = @"New Book";
+        self.author = @"Author";
     }
     return self;
 }

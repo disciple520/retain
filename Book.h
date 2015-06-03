@@ -10,6 +10,7 @@
 
 @interface Book : NSObject
 
-@property (strong) NSString *bookTitle;
+@property (strong) NSString *title;
+@property (strong) NSString *author;
 
 @end
