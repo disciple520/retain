@@ -12,7 +12,7 @@
 
 - (IBAction)addBook:(id)sender;
 
-@property (strong) IBOutlet NSView *currentBooksTable;
+@property (strong) IBOutlet NSTableView *currentBooksTable;
 @property (strong) NSMutableArray *currentBooks;
 @end
 

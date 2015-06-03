@@ -26,13 +26,16 @@
 
 - (IBAction)addBook:(id)sender {
     [self.currentBooks addObject:[[Book alloc] init]];
+    [self.currentBooksTable reloadData];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
     return [self.currentBooks count];
 }
 
-- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
-    
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    Book *book = [self.currentBooks objectAtIndex:row];
+    NSString *identifier = [tableColumn identifier];
+    return [book valueForKey:identifier];
 }
 @end
