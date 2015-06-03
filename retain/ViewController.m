@@ -27,4 +27,12 @@
 - (IBAction)addBook:(id)sender {
     [self.currentBooks addObject:[[Book alloc] init]];
 }
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
+    return [self.currentBooks count];
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
+    
+}
 @end
