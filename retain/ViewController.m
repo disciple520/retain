@@ -42,7 +42,7 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
     NSLog(@"There are %li rows in the table", self.currentBooksTable.numberOfRows);
-    NSLog(@"row %li selected", self.currentBooksTable.clickedRow);
+    NSLog(@"row %li selected", self.currentBooksTable.selectedRow);
     
 }
 
