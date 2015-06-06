@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Book.h"
+@import AppKit;
 
 @implementation ViewController
 
@@ -38,4 +39,11 @@
     NSString *identifier = [tableColumn identifier];
     return [book valueForKey:identifier];
 }
+
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    NSLog(@"There are %li rows in the table", self.currentBooksTable.numberOfRows);
+    NSLog(@"row %li selected", self.currentBooksTable.clickedRow);
+    
+}
+
 @end
