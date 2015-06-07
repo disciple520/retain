@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "currentBooksTableController.h"
 #import "Book.h"
 @import AppKit;
 
@@ -28,22 +29,6 @@
 - (IBAction)addBook:(id)sender {
     [self.currentBooks addObject:[[Book alloc] init]];
     [self.currentBooksTable reloadData];
-}
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
-    return [self.currentBooks count];
-}
-
-- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    Book *book = [self.currentBooks objectAtIndex:row];
-    NSString *identifier = [tableColumn identifier];
-    return [book valueForKey:identifier];
-}
-
-- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    NSLog(@"There are %li rows in the table", self.currentBooksTable.numberOfRows);
-    NSLog(@"row %li selected", self.currentBooksTable.selectedRow);
-    
 }
 
 @end

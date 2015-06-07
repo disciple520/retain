@@ -708,7 +708,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" id="T5C-Ws-px9">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="117"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="19"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -744,18 +744,18 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="Xwe-Nz-rAy"/>
-                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="Gia-bN-mxc"/>
+                                                <outlet property="dataSource" destination="ADV-sE-nHp" id="SMu-HE-bWQ"/>
+                                                <outlet property="delegate" destination="ADV-sE-nHp" id="iPb-x2-AbX"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
                                     <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="YES" id="ObT-Ee-UQ9">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ObT-Ee-UQ9">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="NO" id="jOQ-KZ-4j7">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="jOQ-KZ-4j7">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -786,6 +786,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="PR8-9i-VtJ"/>
+                <customObject id="ADV-sE-nHp" customClass="currentBooksTableController"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>

@@ -8,11 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+@class currentBooksTableController;
+
+@interface ViewController : NSViewController 
 
 - (IBAction)addBook:(id)sender;
 
-@property (strong) IBOutlet NSTableView *currentBooksTable;
-@property (strong) NSMutableArray *currentBooks;
+@property currentBooksTableController *currentBooksTableController;
+@property IBOutlet NSTableView *currentBooksTable;
+@property NSMutableArray *currentBooks;
+
 @end
 

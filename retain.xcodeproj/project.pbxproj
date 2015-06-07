@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4351C0A1B23533E00F3FFC0 /* currentBooksTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4351C091B23533E00F3FFC0 /* currentBooksTableController.m */; };
 		C4B267711B1C969D000B048A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267701B1C969D000B048A /* AppDelegate.m */; };
 		C4B267731B1C969D000B048A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267721B1C969D000B048A /* main.m */; };
 		C4B267761B1C969D000B048A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267751B1C969D000B048A /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4351C081B23533E00F3FFC0 /* currentBooksTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = currentBooksTableController.h; path = ../currentBooksTableController.h; sourceTree = "<group>"; };
+		C4351C091B23533E00F3FFC0 /* currentBooksTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = currentBooksTableController.m; path = ../currentBooksTableController.m; sourceTree = "<group>"; };
 		C4B2676A1B1C969D000B048A /* retain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = retain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B2676E1B1C969D000B048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B2676F1B1C969D000B048A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				C4B267701B1C969D000B048A /* AppDelegate.m */,
 				C4B267741B1C969D000B048A /* ViewController.h */,
 				C4B267751B1C969D000B048A /* ViewController.m */,
+				C4351C081B23533E00F3FFC0 /* currentBooksTableController.h */,
+				C4351C091B23533E00F3FFC0 /* currentBooksTableController.m */,
 				C4B2677A1B1C969D000B048A /* Images.xcassets */,
 				C4B2677C1B1C969D000B048A /* Main.storyboard */,
 				C4B267771B1C969D000B048A /* retain.xcdatamodeld */,
@@ -226,6 +231,7 @@
 				C4B267951B1DFFC3000B048A /* Book.m in Sources */,
 				C4B267761B1C969D000B048A /* ViewController.m in Sources */,
 				C4B267731B1C969D000B048A /* main.m in Sources */,
+				C4351C0A1B23533E00F3FFC0 /* currentBooksTableController.m in Sources */,
 				C4B267791B1C969D000B048A /* retain.xcdatamodeld in Sources */,
 				C4B267711B1C969D000B048A /* AppDelegate.m in Sources */,
 			);
@@ -417,6 +423,7 @@
 				C4B2678F1B1C969D000B048A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4B267901B1C969D000B048A /* Build configuration list for PBXNativeTarget "retainTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +432,7 @@
 				C4B267921B1C969D000B048A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
