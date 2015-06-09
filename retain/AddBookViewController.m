@@ -28,6 +28,8 @@
     newBook = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
     [newBook setValue:[self.titleField stringValue] forKey:@"title"];
     [newBook setValue:[self.authorField stringValue] forKey:@"author"];
+    [self.homeView saveAndReload];
+    [self dismissViewController:self];
     
 }
 

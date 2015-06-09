@@ -785,7 +785,7 @@
                                     <font key="font" metaFont="systemBold" size="20"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="1ZA-A8-hjW" kind="popover" popoverAnchorView="v9Z-2J-Wx6" popoverBehavior="t" preferredEdge="maxY" id="GGg-ol-Dfu"/>
+                                    <segue destination="1ZA-A8-hjW" kind="popover" identifier="toAddBookView" popoverAnchorView="v9Z-2J-Wx6" popoverBehavior="t" preferredEdge="maxY" id="GGg-ol-Dfu"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "AddBookViewController.h"
 @import AppKit;
 
 @implementation ViewController
@@ -17,7 +18,6 @@
     [super viewDidLoad];
     self.currentBooks = [[NSArray alloc] init];
     [self fetchBookData];
-
 }
 
 - (void)fetchBookData {
@@ -62,6 +62,13 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
     NSLog(@"row %li selected", self.currentBooksTable.selectedRow);
+}
+
+- (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toAddBookView"]) {
+        AddBookViewController *addController = segue.destinationController;
+        addController.homeView = self;
+    }
 }
 
 

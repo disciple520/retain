@@ -7,10 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class ViewController;
 
 @interface AddBookViewController : NSViewController
 
 @property (weak) IBOutlet NSTextField *titleField;
 @property (weak) IBOutlet NSTextField *authorField;
+@property (strong, nonatomic) ViewController *homeView;
 
 @end
