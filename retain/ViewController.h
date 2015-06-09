@@ -10,13 +10,13 @@
 
 @class currentBooksTableController;
 
-@interface ViewController : NSViewController 
+@interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 - (IBAction)addBook:(id)sender;
 
 @property currentBooksTableController *currentBooksTableController;
 @property IBOutlet NSTableView *currentBooksTable;
-@property NSMutableArray *currentBooks;
+@property NSArray *currentBooks;
 
 @end
 

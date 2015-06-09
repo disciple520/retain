@@ -11,7 +11,7 @@
 #import "ViewController.h"
 
 
-@interface currentBooksTableController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
+@interface currentBooksTableController : NSViewController 
 
 @property NSArray *currentBooks;
 

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "currentBooksTableController.h"
 #import "Book.h"
 @import AppKit;
 
@@ -16,6 +15,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"View Loading!");
+    
+    self.currentBooks = [[NSArray alloc] init];
+    
+    AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    
+    NSError *error;
+    self.currentBooks = [context executeFetchRequest:request error:&error];
+
+
+
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -38,5 +52,23 @@
     [self.currentBooksTable reloadData];
     
 }
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
+    NSLog(@"Number of rows in table is %lu", [self.currentBooks count]);
+    return [self.currentBooks count];
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSString *identifier = [tableColumn identifier];
+    return [[self.currentBooks objectAtIndex:row] valueForKey:identifier];
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    //NSLog(@"There are %li rows in the table", self.currentBooksTable.numberOfRows);
+    //NSLog(@"row %li selected", self.currentBooksTable.selectedRow);
+    NSLog(@"row selected");
+    
+}
+
 
 @end

@@ -744,8 +744,8 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="ADV-sE-nHp" id="SMu-HE-bWQ"/>
-                                                <outlet property="delegate" destination="ADV-sE-nHp" id="iPb-x2-AbX"/>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="K48-tt-2D5"/>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="qOB-no-OGt"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
@@ -786,7 +786,6 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="PR8-9i-VtJ"/>
-                <customObject id="ADV-sE-nHp" customClass="currentBooksTableController"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
