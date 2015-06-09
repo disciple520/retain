@@ -17,16 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"TableController Loading");
+    self.currentBooks = [[NSArray alloc] init];
+    
+    AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    
+    NSError *error;
+    self.currentBooks = [context executeFetchRequest:request error:&error];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
+    NSLog(@"Number of rows in table is %lu", [self.currentBooks count]);
     return [self.currentBooks count];
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    Book *book = [self.currentBooks objectAtIndex:row];
+    
     NSString *identifier = [tableColumn identifier];
-    return [book valueForKey:identifier];
+    NSLog(@"should be printing %@", [self.currentBooks valueForKey:identifier]);
+    return [self.currentBooks valueForKey:identifier];
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {

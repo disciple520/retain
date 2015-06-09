@@ -28,17 +28,13 @@
     
     AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDesc];
-
     NSManagedObject *newBook;
     newBook = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
     [newBook setValue:@"new Book" forKey:@"title"];
     [newBook setValue:@"some Author" forKey:@"author"];
     
     NSError *error;
-    [context save::&error];
+    [context save:&error];
     [self.currentBooksTable reloadData];
     
 }

@@ -13,6 +13,6 @@
 
 @interface currentBooksTableController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
-@property NSMutableArray *currentBooks;
+@property NSArray *currentBooks;
 
 @end
