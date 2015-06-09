@@ -8,28 +8,27 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
-#import "Book.h"
 @import AppKit;
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"View Loading!");
-    
     self.currentBooks = [[NSArray alloc] init];
-    
+    [self fetchBookData];
+
+}
+
+- (void)fetchBookData {
     AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
+    self.context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:self.context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDesc];
     
     NSError *error;
-    self.currentBooks = [context executeFetchRequest:request error:&error];
-
-
-
+    self.currentBooks = [self.context executeFetchRequest:request error:&error];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -47,10 +46,20 @@
     [newBook setValue:@"new Book" forKey:@"title"];
     [newBook setValue:@"some Author" forKey:@"author"];
     
-    NSError *error;
-    [context save:&error];
-    [self.currentBooksTable reloadData];
+    [self saveAndReload];
     
+}
+
+- (IBAction)removeBook:(id)sender {
+    NSManagedObject *bookToDelete =[self.currentBooks objectAtIndex:self.currentBooksTable.selectedRow];
+    [self.context deleteObject:bookToDelete];
+    [self saveAndReload];
+}
+
+- (void)saveAndReload {
+    NSError *error;
+    [self.context save:&error];
+    [self.currentBooksTable reloadData];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
@@ -64,10 +73,7 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    //NSLog(@"There are %li rows in the table", self.currentBooksTable.numberOfRows);
-    //NSLog(@"row %li selected", self.currentBooksTable.selectedRow);
-    NSLog(@"row selected");
-    
+    NSLog(@"row %li selected", self.currentBooksTable.selectedRow);
 }
 
 

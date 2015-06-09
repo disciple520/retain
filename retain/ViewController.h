@@ -13,10 +13,12 @@
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 - (IBAction)addBook:(id)sender;
+- (IBAction)removeBook:(id)sender;
 
 @property currentBooksTableController *currentBooksTableController;
 @property IBOutlet NSTableView *currentBooksTable;
 @property NSArray *currentBooks;
+@property NSManagedObjectContext *context;
 
 @end
 
