@@ -37,19 +37,6 @@
     // Update the view, if already loaded.
 }
 
-- (IBAction)addBook:(id)sender {
-    
-    AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    NSManagedObject *newBook;
-    newBook = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
-    [newBook setValue:@"new Book" forKey:@"title"];
-    [newBook setValue:@"some Author" forKey:@"author"];
-    
-    [self saveAndReload];
-    
-}
-
 - (IBAction)removeBook:(id)sender {
     NSManagedObject *bookToDelete =[self.currentBooks objectAtIndex:self.currentBooksTable.selectedRow];
     [self.context deleteObject:bookToDelete];

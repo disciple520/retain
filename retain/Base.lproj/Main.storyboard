@@ -760,16 +760,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9Z-2J-Wx6">
-                                <rect key="frame" x="380" y="199" width="42" height="32"/>
-                                <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e9R-hu-FE3">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="systemBold" size="20"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="addBook:" target="XfG-lQ-9wD" id="0xO-SF-9gq"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YsE-WP-shv">
                                 <rect key="frame" x="195" y="209" width="149" height="29"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Current Books" id="sAU-et-3fT">
@@ -788,6 +778,16 @@
                                     <action selector="removeBook:" target="XfG-lQ-9wD" id="HtF-Uo-iv7"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9Z-2J-Wx6">
+                                <rect key="frame" x="380" y="202" width="42" height="32"/>
+                                <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e9R-hu-FE3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="20"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="1ZA-A8-hjW" kind="popover" popoverAnchorView="v9Z-2J-Wx6" popoverBehavior="t" preferredEdge="maxY" id="GGg-ol-Dfu"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -798,6 +798,75 @@
                 <userDefaultsController representsSharedInstance="YES" id="PR8-9i-VtJ"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--addBookView-->
+        <scene sceneID="pgM-uM-O0K">
+            <objects>
+                <viewController title="addBookView" id="1ZA-A8-hjW" customClass="AddBookViewController" sceneMemberID="viewController">
+                    <view key="view" id="V9D-td-Arv">
+                        <rect key="frame" x="0.0" y="0.0" width="290" height="146"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-2Z-UzU">
+                                <rect key="frame" x="85" y="72" width="173" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="FjC-7u-xYL">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEt-SG-tFQ">
+                                <rect key="frame" x="85" y="40" width="173" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="hpd-jV-zIe">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iqe-8X-OGv">
+                                <rect key="frame" x="90" y="106" width="111" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add Book" id="DND-tX-KRr">
+                                    <font key="font" size="23" name="HoeflerText-Regular"/>
+                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19o-GR-wFa">
+                                <rect key="frame" x="36" y="64" width="48" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title:" id="km1-D5-hoC">
+                                    <font key="font" size="17" name="HoeflerText-Regular"/>
+                                    <color key="textColor" red="0.015686274510000001" green="0.50588235290000005" blue="0.61960784310000006" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YDN-Ga-fHF">
+                                <rect key="frame" x="19" y="34" width="60" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Author:" id="0jt-DV-TXB">
+                                    <font key="font" size="17" name="HoeflerText-Regular"/>
+                                    <color key="textColor" red="0.015686274510000001" green="0.50588235290000005" blue="0.61960784310000006" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D1K-ks-QrL">
+                                <rect key="frame" x="212" y="6" width="46" height="25"/>
+                                <buttonCell key="cell" type="roundTextured" title="Add" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vYR-rA-fQF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="18" name="HoeflerText-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addBook:" target="1ZA-A8-hjW" id="cp0-ar-nO4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="authorField" destination="ZEt-SG-tFQ" id="sOt-C9-MSW"/>
+                        <outlet property="titleField" destination="gfm-2Z-UzU" id="Ng3-yS-MO3"/>
+                    </connections>
+                </viewController>
+                <customObject id="Uvd-OY-GXY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="973"/>
         </scene>
     </scenes>
 </document>
