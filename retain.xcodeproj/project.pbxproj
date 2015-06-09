@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4351C0A1B23533E00F3FFC0 /* currentBooksTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4351C091B23533E00F3FFC0 /* currentBooksTableController.m */; };
+		C43FFD1C1B2726A100AD99B6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C43FFD1A1B2726A100AD99B6 /* Model.xcdatamodeld */; };
 		C4B267711B1C969D000B048A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267701B1C969D000B048A /* AppDelegate.m */; };
 		C4B267731B1C969D000B048A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267721B1C969D000B048A /* main.m */; };
 		C4B267761B1C969D000B048A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267751B1C969D000B048A /* ViewController.m */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		C4351C081B23533E00F3FFC0 /* currentBooksTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = currentBooksTableController.h; path = ../currentBooksTableController.h; sourceTree = "<group>"; };
 		C4351C091B23533E00F3FFC0 /* currentBooksTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = currentBooksTableController.m; path = ../currentBooksTableController.m; sourceTree = "<group>"; };
+		C43FFD1B1B2726A100AD99B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C4B2676A1B1C969D000B048A /* retain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = retain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B2676E1B1C969D000B048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B2676F1B1C969D000B048A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C4B2677C1B1C969D000B048A /* Main.storyboard */,
 				C4B267771B1C969D000B048A /* retain.xcdatamodeld */,
 				C4B2676D1B1C969D000B048A /* Supporting Files */,
+				C43FFD1A1B2726A100AD99B6 /* Model.xcdatamodeld */,
 			);
 			path = retain;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				C4B267951B1DFFC3000B048A /* Book.m in Sources */,
 				C4B267761B1C969D000B048A /* ViewController.m in Sources */,
 				C4B267731B1C969D000B048A /* main.m in Sources */,
+				C43FFD1C1B2726A100AD99B6 /* Model.xcdatamodeld in Sources */,
 				C4351C0A1B23533E00F3FFC0 /* currentBooksTableController.m in Sources */,
 				C4B267791B1C969D000B048A /* retain.xcdatamodeld in Sources */,
 				C4B267711B1C969D000B048A /* AppDelegate.m in Sources */,
@@ -437,6 +441,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		C43FFD1A1B2726A100AD99B6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C43FFD1B1B2726A100AD99B6 /* Model.xcdatamodel */,
+			);
+			currentVersion = C43FFD1B1B2726A100AD99B6 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		C4B267771B1C969D000B048A /* retain.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

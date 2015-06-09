@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 #import "currentBooksTableController.h"
 #import "Book.h"
 @import AppKit;
@@ -15,9 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.currentBooks = [[NSMutableArray alloc] init];
-    // Do any additional setup after loading the view.
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -27,8 +25,22 @@
 }
 
 - (IBAction)addBook:(id)sender {
-    [self.currentBooks addObject:[[Book alloc] init]];
+    
+    AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Book" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+
+    NSManagedObject *newBook;
+    newBook = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
+    [newBook setValue:@"new Book" forKey:@"title"];
+    [newBook setValue:@"some Author" forKey:@"author"];
+    
+    NSError *error;
+    [context save::&error];
     [self.currentBooksTable reloadData];
+    
 }
 
 @end

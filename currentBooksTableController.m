@@ -7,6 +7,7 @@
 //
 
 #import "currentBooksTableController.h"
+#import "AppDelegate.h"
 
 @interface currentBooksTableController ()
 
@@ -16,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
