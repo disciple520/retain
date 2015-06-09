@@ -56,8 +56,9 @@
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSString *identifier = [tableColumn identifier];
-    return [[self.currentBooks objectAtIndex:row] valueForKey:identifier];
+    
+    NSString *title = [[self.currentBooks objectAtIndex:row] valueForKey:@"title"];    
+    return [NSString stringWithFormat:@"%@", title];
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {

@@ -88,12 +88,12 @@
 				C4B267701B1C969D000B048A /* AppDelegate.m */,
 				C4B267741B1C969D000B048A /* ViewController.h */,
 				C4B267751B1C969D000B048A /* ViewController.m */,
+				C43FFD1D1B2753CF00AD99B6 /* AddBookViewController.h */,
+				C43FFD1E1B2753CF00AD99B6 /* AddBookViewController.m */,
 				C4B2677A1B1C969D000B048A /* Images.xcassets */,
 				C4B2677C1B1C969D000B048A /* Main.storyboard */,
 				C4B267771B1C969D000B048A /* retain.xcdatamodeld */,
 				C4B2676D1B1C969D000B048A /* Supporting Files */,
-				C43FFD1D1B2753CF00AD99B6 /* AddBookViewController.h */,
-				C43FFD1E1B2753CF00AD99B6 /* AddBookViewController.m */,
 			);
 			path = retain;
 			sourceTree = "<group>";
