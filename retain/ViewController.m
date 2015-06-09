@@ -59,6 +59,7 @@
 - (void)saveAndReload {
     NSError *error;
     [self.context save:&error];
+    [self fetchBookData];
     [self.currentBooksTable reloadData];
 }
 
