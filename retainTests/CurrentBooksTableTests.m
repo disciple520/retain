@@ -13,6 +13,7 @@
 @interface CurrentBooksTableTests : XCTestCase {
 @private
     ViewController *vc;
+    NSArray *mockCurrentBooksArray;
 }
 @end
 
@@ -21,6 +22,7 @@
 - (void)setUp {
     [super setUp];
     vc = [[ViewController alloc] init];
+    mockCurrentBooksArray = [[NSArray alloc] initWithObjects:@"Crazy Busy", @"The Bible", @"These are the Generations", nil];
 }
 
 - (void)tearDown {
@@ -29,9 +31,15 @@
 
 - (void)testCorrectNumberOfRowsInTable {
     
-    id mockTableView = [OCMockObject mockForClass:[UITableView class]];
+    //given
+    vc.currentBooks = mockCurrentBooksArray;
     
-    int numberOfRows = [vc numberOfRowsInTableView:(NSTableView *)aTableView];
+    //when
+    int numberOfRows = (int)[vc numberOfRowsInTableView:vc.currentBooksTable];
+   
+    //then
+    XCTAssertEqual(numberOfRows, 3);
+    
 }
 
 @end

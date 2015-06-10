@@ -51,14 +51,14 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
-    //return [self.currentBooks count];
-    return 4;
+    return [self.currentBooks count];
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     
     NSString *title = [[self.currentBooks objectAtIndex:row] valueForKey:@"title"];    
     return [NSString stringWithFormat:@"%@", title];
+    
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
