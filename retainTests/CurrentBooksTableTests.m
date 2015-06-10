@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import <MagicalRecord/MagicalRecord.h>
 #import "ViewController.h"
 
 @interface CurrentBooksTableTests : XCTestCase {
@@ -22,10 +23,13 @@
 - (void)setUp {
     [super setUp];
     vc = [[ViewController alloc] init];
-    mockCurrentBooksArray = [[NSArray alloc] initWithObjects:@"Crazy Busy", @"The Bible", @"These are the Generations", nil];
+    mockCurrentBooksArray = [[NSArray alloc] initWithObjects:@"Salt, Sugar, Fat", @"What's Best Next", @"These are the Generations", nil];
+    [MagicalRecord setDefaultModelFromClass:[self class]];
+    [MagicalRecord setupCoreDataStackWithInMemoryStore];
 }
 
 - (void)tearDown {
+    [MagicalRecord cleanUp]; //was MagicalRecordHelpers
     [super tearDown];
 }
 
