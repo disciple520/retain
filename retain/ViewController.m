@@ -51,8 +51,8 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
-    NSLog(@"Number of rows in table is %lu", [self.currentBooks count]);
-    return [self.currentBooks count];
+    //return [self.currentBooks count];
+    return 4;
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {

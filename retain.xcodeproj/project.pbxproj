@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C43FFD1F1B2753CF00AD99B6 /* AddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FFD1E1B2753CF00AD99B6 /* AddBookViewController.m */; };
+		C43FFD211B28966600AD99B6 /* CurrentBooksTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FFD201B28966600AD99B6 /* CurrentBooksTableTests.m */; };
 		C4B267711B1C969D000B048A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267701B1C969D000B048A /* AppDelegate.m */; };
 		C4B267731B1C969D000B048A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267721B1C969D000B048A /* main.m */; };
 		C4B267761B1C969D000B048A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267751B1C969D000B048A /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		C43FFD1D1B2753CF00AD99B6 /* AddBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBookViewController.h; sourceTree = "<group>"; };
 		C43FFD1E1B2753CF00AD99B6 /* AddBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBookViewController.m; sourceTree = "<group>"; };
+		C43FFD201B28966600AD99B6 /* CurrentBooksTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentBooksTableTests.m; sourceTree = "<group>"; };
 		C4B2676A1B1C969D000B048A /* retain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = retain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B2676E1B1C969D000B048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B2676F1B1C969D000B048A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		C4B267861B1C969D000B048A /* retainTests */ = {
 			isa = PBXGroup;
 			children = (
+				C43FFD201B28966600AD99B6 /* CurrentBooksTableTests.m */,
 				C4B267891B1C969D000B048A /* retainTests.m */,
 				C4B267871B1C969D000B048A /* Supporting Files */,
 			);
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B2678A1B1C969D000B048A /* retainTests.m in Sources */,
+				C43FFD211B28966600AD99B6 /* CurrentBooksTableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
