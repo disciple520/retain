@@ -16,6 +16,7 @@
 		C4B2677B1B1C969D000B048A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B2677A1B1C969D000B048A /* Images.xcassets */; };
 		C4B2677E1B1C969D000B048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B2677C1B1C969D000B048A /* Main.storyboard */; };
 		C4B2678A1B1C969D000B048A /* retainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B267891B1C969D000B048A /* retainTests.m */; };
+		DB43F7B765FAC7DF05412B8B /* libPods-retainTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D994CDA8A6AE2B1FCD4EED /* libPods-retainTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		C4B267831B1C969D000B048A /* retainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = retainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B267881B1C969D000B048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B267891B1C969D000B048A /* retainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = retainTests.m; sourceTree = "<group>"; };
+		E89524C072FF6E2383FB3159 /* Pods-retainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-retainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-retainTests/Pods-retainTests.release.xcconfig"; sourceTree = "<group>"; };
+		F104F281E3ACAE314CC4E088 /* Pods-retainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-retainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-retainTests/Pods-retainTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4D994CDA8A6AE2B1FCD4EED /* libPods-retainTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-retainTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,18 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB43F7B765FAC7DF05412B8B /* libPods-retainTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07BBB6C8D02A0C465EB97865 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4D994CDA8A6AE2B1FCD4EED /* libPods-retainTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4B267611B1C969D000B048A = {
 			isa = PBXGroup;
 			children = (
 				C4B2676C1B1C969D000B048A /* retain */,
 				C4B267861B1C969D000B048A /* retainTests */,
 				C4B2676B1B1C969D000B048A /* Products */,
+				E8D28A5E24CDB6C041F1573A /* Pods */,
+				07BBB6C8D02A0C465EB97865 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +142,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E8D28A5E24CDB6C041F1573A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F104F281E3ACAE314CC4E088 /* Pods-retainTests.debug.xcconfig */,
+				E89524C072FF6E2383FB3159 /* Pods-retainTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4B267901B1C969D000B048A /* Build configuration list for PBXNativeTarget "retainTests" */;
 			buildPhases = (
+				1E5E2F4B8C308BD90EB3F7A5 /* Check Pods Manifest.lock */,
 				C4B2677F1B1C969D000B048A /* Sources */,
 				C4B267801B1C969D000B048A /* Frameworks */,
 				C4B267811B1C969D000B048A /* Resources */,
+				A8CB4C77CA675B672DD309C8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +246,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E5E2F4B8C308BD90EB3F7A5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8CB4C77CA675B672DD309C8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-retainTests/Pods-retainTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4B267661B1C969D000B048A /* Sources */ = {
@@ -384,6 +443,7 @@
 		};
 		C4B267911B1C969D000B048A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F104F281E3ACAE314CC4E088 /* Pods-retainTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +470,7 @@
 		};
 		C4B267921B1C969D000B048A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E89524C072FF6E2383FB3159 /* Pods-retainTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
